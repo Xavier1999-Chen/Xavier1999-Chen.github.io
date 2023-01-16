@@ -187,16 +187,17 @@ function render(a) {
     vs[i + 2] = v.z;
   }
   heart.geometry.attributes.position.needsUpdate = true;
+  
+  let demo = new THREE.TextureLoader().load("https://github.com/Xavier1999-Chen/Xavier1999-Chen.github.io/blob/main/BHBX.jpg?raw=true")
+
+mesh = new THREE.Mesh(geometry, heart.material)
+        // 几何体  材料（渲染图）
+scene.add(mesh)
 
   controls.update();
   renderer.render(scene, camera);
 }
 
-let demo = new THREE.TextureLoader().load("https://github.com/Xavier1999-Chen/Xavier1999-Chen.github.io/blob/main/BHBX.jpg?raw=true")
-
-mesh = new THREE.Mesh(geometry, heart.material)
-        // 几何体  材料（渲染图）
-scene.add(mesh)
 
 
 window.addEventListener("resize", onWindowResize, false);
