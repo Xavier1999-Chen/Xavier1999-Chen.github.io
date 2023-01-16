@@ -64,6 +64,13 @@ new THREE.OBJLoader().load(
   }
 );
 
+//   let demo = new THREE.TextureLoader().load("https://github.com/Xavier1999-Chen/Xavier1999-Chen.github.io/blob/main/BHBX.jpg?raw=true")
+
+// mesh = new THREE.Mesh(geometry, heart.material)
+//         // 几何体  材料（渲染图）
+// scene.add(mesh)
+
+
 let positions = [];
 let colors = [];
 const geometry = new THREE.BufferGeometry();
@@ -188,12 +195,6 @@ function render(a) {
   }
   heart.geometry.attributes.position.needsUpdate = true;
   
-  let demo = new THREE.TextureLoader().load("https://github.com/Xavier1999-Chen/Xavier1999-Chen.github.io/blob/main/BHBX.jpg?raw=true")
-
-mesh = new THREE.Mesh(geometry, heart.material)
-        // 几何体  材料（渲染图）
-scene.add(mesh)
-
   controls.update();
   renderer.render(scene, camera);
 }
