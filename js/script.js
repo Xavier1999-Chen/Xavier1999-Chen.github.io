@@ -63,22 +63,6 @@ new THREE.OBJLoader().load(
     renderer.setAnimationLoop(render);
   }
 );
-//写入文字
-const loader = new FontLoader();
-
-loader.load( 'fonts/helvetiker_regular.typeface.json', function ( font ) {
-
-	const geometry = new TextGeometry( 'BHBX', {
-		font: font,
-		size: 80,
-		height: 5,
-		curveSegments: 12,
-		bevelEnabled: true,
-		bevelThickness: 10,
-		bevelSize: 8,
-		bevelSegments: 5
-	} );
-} );
 
 let positions = [];
 let colors = [];
